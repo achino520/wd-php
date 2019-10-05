@@ -1,0 +1,16 @@
+config:
+    name: testcase description
+    variables: {}
+teststeps:
+-   name: /betting-rules/zh/Handicap%20Betting/
+    request:
+        headers:
+            If-Modified-Since: Tue, 01 Oct 2019 10:50:18 GMT
+            User-Agent: Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML,
+                like Gecko) Chrome/68.0.3440.75 Safari/537.36
+        method: GET
+        url: https://bti-io.gitlab.io/betting-rules/zh/Handicap%20Betting/
+    validate:
+    -   eq:
+        - status_code
+        - 304

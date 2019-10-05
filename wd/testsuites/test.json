@@ -1,0 +1,46 @@
+{
+    "config": {
+        "name": "achino testing",
+        "variables": {}
+    },
+    "teststeps": [
+        {
+            "name": "achino testing1...",
+            "request": {
+                "url": "https://bti-io.gitlab.io/betting-rules/zh/Handicap%20Betting/",
+                "method": "GET",
+                "headers": {
+                    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.75 Safari/537.36",
+                    "If-Modified-Since": "Tue, 01 Oct 2019 10:50:18 GMT"
+                }
+            },
+            "validate": [
+                {
+                    "eq": [
+                        "status_code",
+                        304
+                    ]
+                }
+            ]
+        },
+		{
+            "name": "achino testing2...",
+            "request": {
+                "url": "https://bti-io.gitlab.io/betting-rules/zh/Handicap%20Betting/",
+                "method": "GET",
+                "headers": {
+                    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.75 Safari/537.36",
+                    "If-Modified-Since": "Tue, 01 Oct 2019 10:50:18 GMT"
+                }
+            },
+            "validate": [
+                {
+                    "eq": [
+                        "status_code",
+                        304
+                    ]
+                }
+            ]
+        }
+    ]
+}
